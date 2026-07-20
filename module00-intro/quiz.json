@@ -1,0 +1,53 @@
+{
+  "module": "module00-intro",
+  "title": "Welcome to SV testbench check",
+  "passing_score": 0.67,
+  "items": [
+    {
+      "id": "q1",
+      "type": "multiple_choice",
+      "prompt": "This module in learn_sv_tb is mainly about\u2026",
+      "choices": [
+        "Welcome to SV testbench",
+        "Place-and-route only",
+        "Git remotes only",
+        "Writing a commercial VIP"
+      ],
+      "answer": 0,
+      "explain": "Focus: Welcome to SV testbench."
+    },
+    {
+      "id": "q2",
+      "type": "multiple_choice",
+      "prompt": "Track B practice is typically\u2026",
+      "choices": [
+        "Browser concept labs on the learning platform",
+        "Only Vivado GUI tutorials",
+        "Skipping all checklists",
+        "Uploading RTL to a grading server"
+      ],
+      "answer": 0,
+      "explain": "Track B is in-browser literacy."
+    },
+    {
+      "id": "q3",
+      "type": "multiple_choice",
+      "prompt": "Primary practice surface for this module is\u2026",
+      "choices": [
+        "intro",
+        "Only PowerPoint",
+        "Only synthesis P&R",
+        "Only GitHub Issues"
+      ],
+      "answer": 0,
+      "explain": "Lab / activity id: intro."
+    },
+    {
+      "id": "q4",
+      "type": "true_false",
+      "prompt": "Browser concept labs replace a full offline toolchain for this course.",
+      "answer": false,
+      "explain": "Labs are literacy; Track A / offline keeps fidelity."
+    }
+  ]
+}

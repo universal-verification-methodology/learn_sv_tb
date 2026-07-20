@@ -1,0 +1,21 @@
+title: TB anatomy
+footer: learn_sv_tb — tb anatomy
+slides:
+- type: title
+  title: TB anatomy
+  subtitle: Scaffold module — expand with module-slides when recording
+  notes: Welcome to TB anatomy. This is a scaffold transcript for learn_sv_tb.
+- type: bullets
+  title: What you practice
+  bullets:
+  - Primary surface - tb-anatomy
+  - Track A - local / offline practice
+  - Track B - browser lab when shipped
+  notes: Practice both tracks when you can. Browser labs build intuition; offline builds fidelity.
+- type: bullets
+  title: Your turn
+  bullets:
+  - Open EXAMPLES.md and work one prompt
+  - Open the browser lab if this module has a tool id
+  - Check off CHECKLIST.md
+  notes: Complete the checklist for at least one track, then take the short quiz.
