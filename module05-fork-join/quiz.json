@@ -6,42 +6,61 @@
     {
       "id": "q1",
       "type": "multiple_choice",
-      "prompt": "This module is mainly about\u2026",
+      "prompt": "With fork-join and child threads finishing at t=10 and t=30, the parent resumes at…",
       "choices": [
-        "Fork / join",
-        "Place-and-route only",
-        "Git only",
-        "Nothing"
+        "t=30 (waits for all children)",
+        "t=10 (first child only)",
+        "t=0 (immediate)",
+        "t=20 (average)"
       ],
       "answer": 0,
-      "explain": "Fork / join"
+      "explain": "join waits until every forked thread completes — the maximum time."
     },
     {
       "id": "q2",
-      "type": "true_false",
-      "prompt": "Browser labs replace full offline toolchains.",
-      "answer": false,
-      "explain": "Literacy only."
+      "type": "multiple_choice",
+      "prompt": "fork-join_any with the same durations resumes the parent at…",
+      "choices": [
+        "t=10 (first finish)",
+        "t=30 (last finish)",
+        "t=0 (immediate)",
+        "Never — parent blocks forever"
+      ],
+      "answer": 0,
+      "explain": "join_any resumes when the first child completes; others may keep running."
     },
     {
       "id": "q3",
       "type": "multiple_choice",
-      "prompt": "Primary practice id is\u2026",
+      "prompt": "fork-join_none means the parent…",
       "choices": [
-        "fork-join",
-        "vivado-only",
-        "gds-only",
-        "spice-only"
+        "Continues immediately while children run in background",
+        "Waits for all children before any code after join",
+        "Terminates all children at t=0",
+        "Can only fork one thread"
       ],
       "answer": 0,
-      "explain": "Lab id."
+      "explain": "join_none does not wait; children proceed independently."
     },
     {
       "id": "q4",
       "type": "true_false",
-      "prompt": "learn_sv_tb follows the lab-driven pass-3 pattern.",
-      "answer": true,
-      "explain": "One module \u2248 one lab when possible."
+      "prompt": "After join_any, slower forked threads always stop automatically.",
+      "answer": false,
+      "explain": "Remaining threads may still run unless you disable them explicitly."
+    },
+    {
+      "id": "q5",
+      "type": "multiple_choice",
+      "prompt": "You would pick join (not join_none) when…",
+      "choices": [
+        "The parent must observe all child results before continuing",
+        "You want the parent to resume at t=0",
+        "Only one thread is forked",
+        "Children must not consume simulation time"
+      ],
+      "answer": 0,
+      "explain": "join synchronizes on all children finishing."
     }
   ]
 }

@@ -1,7 +1,78 @@
 title: File / vector I/O
-footer: learn_sv_tb
+footer: learn_sv_tb — file vector io
 slides:
 - type: title
   title: File / vector I/O
-  subtitle: Scaffold
-  notes: Scaffold.
+  subtitle: Regression stimulus often lives outside the testbench source
+  notes: Regression stimulus often lives outside the testbench source — hex files
+    of input vectors and expected outputs that you load once and replay in a loop.
+    SystemVerilog gives you dollar-readmemh and dollar-readmemb to fill memory arrays
+    from disk at simulation start. The testbench then applies each stimulus word,
+    samples the DUT, and compares against the expected array. This module is literacy
+    for that file-driven pattern, not a full regression farm yet.
+- type: bullets
+  title: Stimulus, expect, and apply loop
+  bullets:
+  - 'The usual shape is three arrays: stimulus, expected, and optionally actual results'
+  - Dollar-readmemh loads hexadecimal words line by line
+  - A for loop walks from zero to N minus one
+  - The same loop handles four vectors or four thousand
+  notes: 'The usual shape is three arrays: stimulus, expected, and optionally actual
+    results. Dollar-readmemh loads hexadecimal words line by line; at-address prefixes
+    skip to a specific index. A for loop walks from zero to N minus one: drive inputs
+    from stimulus of i, advance time, compare DUT output to expected of i, and flag
+    mismatches. Separating vectors from procedural code lets you swap test sets without
+    recompiling the testbench — the same loop handles four vectors or four thousand.'
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: In the browser lab track, open the file-and-vector I/O lab from the tools
+    page. Load the starter and-two example with four stimulus and expect pairs. Step
+    through the apply loop and watch pass or fail per vector. Try the at-address preset
+    to see how line skipping works. Switch to a different gate model and confirm the
+    same loop structure still applies. Work the challenges on hex packing and expected
+    values, then use Check.
+- type: bullets
+  title: Real SystemVerilog practice
+  bullets:
+  - In the real SystemVerilog track, open this module's examples prompts
+  - Restate the apply-loop idea in one sentence , load hex files, drive, compare
+  - Sketch the pattern below on paper and label what each array holds
+  - Optional stretch
+  - '```systemverilog // Load vectors from hex files at time zero reg [7:0] stim [0:DEPTH-1]'
+  notes: "In the real SystemVerilog track, open this module's examples prompts. Restate\
+    \ the apply-loop idea in one sentence — load hex files, drive, compare. Sketch\
+    \ the pattern below on paper and label what each array holds. Optional stretch:\
+    \ write two hex lines for an and-two with inputs one-one and expected output one.\n\
+    \n```systemverilog\n// Load vectors from hex files at time zero\nreg [7:0] stim\
+    \ [0:DEPTH-1];\nreg [7:0] exp  [0:DEPTH-1];\ninitial begin\n  $readmemh(\"stim.hex\"\
+    , stim);\n  $readmemh(\"exp.hex\",  exp);\n  for (int i = 0; i < N; i++) begin\n\
+    \    apply(stim[i]);        // drive DUT inputs from word i\n    #1;\n    if (dut_out\
+    \ !== exp[i]) $error(\"FAIL @%0d\", i);\n  end\nend\n// stim.hex bit0=a bit1=b;\
+    \ exp.hex holds expected y\n```"
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not mix up dollar-readmemh and dollar-readmemb
+  - Do not forget at-address when your files have gaps or comments
+  - Do not compare before inputs have settled
+  - And remember
+  notes: 'Do not mix up dollar-readmemh and dollar-readmemb — one expects hex digits,
+    the other binary. Do not forget at-address when your files have gaps or comments
+    — the parser skips lines but address directives matter. Do not compare before
+    inputs have settled — insert a delay or clock edge between apply and check. And
+    remember: the browser lab uses a simplified parser; real simulators still need
+    correct file paths relative to the simulation working directory.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track , preferably both
+  - In the browser, load the starter and-two set, run Apply all
+  - On paper, write two hex lines for stim and two for exp that test an or-two
+  - When you are ready
+  notes: Complete the checklist for at least one track — preferably both. In the browser,
+    load the starter and-two set, run Apply all, and explain one failing vector if
+    you inject a wrong expect. On paper, write two hex lines for stim and two for
+    exp that test an or-two. When you are ready, take the short quiz, then continue
+    to virtual interface wiring in the next module.

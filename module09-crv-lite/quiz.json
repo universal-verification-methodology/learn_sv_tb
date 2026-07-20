@@ -6,42 +6,48 @@
     {
       "id": "q1",
       "type": "multiple_choice",
-      "prompt": "This module is mainly about\u2026",
+      "prompt": "constraint c_range { data inside {[0:15]}; } means…",
       "choices": [
-        "Constraint / random lite",
-        "Place-and-route only",
-        "Git only",
-        "Nothing"
+        "Only values 0–15 are legal for rand data",
+        "data is always zero",
+        "randomize ignores constraints",
+        "data must equal 15 every roll"
       ],
       "answer": 0,
-      "explain": "Constraint / random lite"
+      "explain": "inside shrinks the legal set; randomize picks from values that satisfy all hard constraints."
     },
     {
       "id": "q2",
-      "type": "true_false",
-      "prompt": "Browser labs replace full offline toolchains.",
-      "answer": false,
-      "explain": "Literacy only."
+      "type": "multiple_choice",
+      "prompt": "When hard constraints have no legal intersection, randomize…",
+      "choices": [
+        "Fails (returns 0 / false)",
+        "Always picks zero",
+        "Ignores one constraint silently",
+        "Only fails in the browser lab"
+      ],
+      "answer": 0,
+      "explain": "Over-constraining yields an empty legal set—same story in real CRV solvers."
     },
     {
       "id": "q3",
       "type": "multiple_choice",
-      "prompt": "Primary practice id is\u2026",
+      "prompt": "Fixing a seed before randomize mainly helps you…",
       "choices": [
-        "crv-lite",
-        "vivado-only",
-        "gds-only",
-        "spice-only"
+        "Replay the same sample sequence for debug",
+        "Disable all constraints",
+        "Force every field to maximum value",
+        "Skip coverage collection"
       ],
       "answer": 0,
-      "explain": "Lab id."
+      "explain": "Reproducible rolls make failure replay and regression comparison practical."
     },
     {
       "id": "q4",
       "type": "true_false",
-      "prompt": "learn_sv_tb follows the lab-driven pass-3 pattern.",
+      "prompt": "The crv-lite browser lab uses a tiny discrete legal set—not a full commercial constraint solver.",
       "answer": true,
-      "explain": "One module \u2248 one lab when possible."
+      "explain": "Vocabulary matches real CRV; the implementation is dice-level for literacy."
     }
   ]
 }

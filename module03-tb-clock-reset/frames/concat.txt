@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module03-tb-clock-reset/frames/slide-1.png'
+duration 33.264
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module03-tb-clock-reset/frames/slide-2.png'
+duration 36.24
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module03-tb-clock-reset/frames/slide-3.png'
+duration 29.664
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module03-tb-clock-reset/frames/slide-4.png'
+duration 32.952
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module03-tb-clock-reset/frames/slide-5.png'
+duration 35.496
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module03-tb-clock-reset/frames/slide-6.png'
+duration 24.0
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module03-tb-clock-reset/frames/slide-6.png'

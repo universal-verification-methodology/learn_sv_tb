@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module07-vif-wiring/frames/slide-1.png'
+duration 34.032
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module07-vif-wiring/frames/slide-2.png'
+duration 39.408
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module07-vif-wiring/frames/slide-3.png'
+duration 30.936
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module07-vif-wiring/frames/slide-4.png'
+duration 26.088
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module07-vif-wiring/frames/slide-5.png'
+duration 29.64
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module07-vif-wiring/frames/slide-6.png'
+duration 23.88
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module07-vif-wiring/frames/slide-6.png'

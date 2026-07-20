@@ -1,7 +1,86 @@
 title: Virtual interface wiring
-footer: learn_sv_tb
+footer: learn_sv_tb — vif wiring
 slides:
 - type: title
   title: Virtual interface wiring
-  subtitle: Scaffold
-  notes: Scaffold.
+  subtitle: Class-based testbenches need a bridge to the DUT pins
+  notes: Class-based testbenches need a bridge to the DUT pins — you cannot pass module
+    ports into a class the way you pass integers. A SystemVerilog interface bundles
+    signals and modports; a virtual interface is a class-side handle that points at
+    a concrete interface instance in the testbench module. Wire the DUT to the interface,
+    instantiate the interface in tb, assign the virtual handle in the class, then
+    drive and sample through vif dot signal. This module is literacy for that wiring
+    chain, not a full UVM config database flow yet.
+- type: bullets
+  title: The wiring checklist
+  bullets:
+  - Six steps, in order
+  - Declare the interface with clock and bus signals
+  - Instantiate it in the testbench module with clock connected
+  - Connect DUT ports to interface signals or a modport
+  - Declare a virtual interface handle inside the driver or monitor class
+  - Assign the handle , drv dot vif equals bif, or later a config database set and
+    get
+  notes: Six steps, in order. Declare the interface with clock and bus signals. Instantiate
+    it in the testbench module with clock connected. Connect DUT ports to interface
+    signals or a modport. Declare a virtual interface handle inside the driver or
+    monitor class. Assign the handle — drv dot vif equals bif, or later a config database
+    set and get. Drive and sample through the handle — vif dot tx, at posedge vif
+    dot clk. Skip a step and the class never sees real pins; get the order wrong and
+    elaboration fails before simulation starts.
+- type: image
+  title: Browser lab
+  image: assets/lab-starter.png
+  caption: Browser lab starter
+  notes: In the browser lab track, open the virtual-interface wiring lab from the
+    tools page. Load the UART starter with declare, instance, and DUT already checked.
+    Step through the remaining checklist items — virtual handle, assign, drive — and
+    watch the code panel grow. Toggle each step and confirm which lines appear or
+    disappear. Try the SPI preset to see the same pattern on a different bus. Work
+    the challenges on modports and handles, then use Check.
+- type: bullets
+  title: Real SystemVerilog practice
+  bullets:
+  - In the real SystemVerilog track, open this module's examples prompts
+  - Restate the wiring chain in one sentence
+  - Sketch the UART pattern below on paper and number the six checklist steps next
+    to each
+  - Optional stretch
+  - '```systemverilog // 1–2'
+  notes: "In the real SystemVerilog track, open this module's examples prompts. Restate\
+    \ the wiring chain in one sentence — interface instance in tb, virtual handle\
+    \ in class, assign before drive. Sketch the UART pattern below on paper and number\
+    \ the six checklist steps next to each block. Optional stretch: note where a UVM\
+    \ config database call would replace the direct assign in a larger environment.\n\
+    \n```systemverilog\n// 1–2: declare + instantiate in tb\ninterface uart_if(input\
+    \ logic clk);\n  logic tx, rx;\nendinterface\nmodule tb;\n  logic clk;\n  uart_if\
+    \ bif(.clk(clk));\n  uart_tx dut(.clk(bif.clk), .tx(bif.tx));\n\n// 3–4: virtual\
+    \ handle in class\nclass uart_driver;\n  virtual uart_if vif;\n  task drive_bit(bit\
+    \ v);\n    @(posedge vif.clk);\n    vif.tx <= v;\n  endtask\nendclass\n\n// 5:\
+    \ assign handle before use\n// drv.vif = bif;\n```"
+- type: bullets
+  title: Pitfalls to watch
+  bullets:
+  - Do not drive DUT ports directly from a class when an interface is the intended
+    boundary
+  - Do not forget to assign the virtual handle before calling drive tasks
+  - Do not mix up virtual interface with a plain interface instance
+  - And remember
+  notes: 'Do not drive DUT ports directly from a class when an interface is the intended
+    boundary — you lose modport discipline and reuse. Do not forget to assign the
+    virtual handle before calling drive tasks — null handles fail at runtime. Do not
+    mix up virtual interface with a plain interface instance — only the virtual keyword
+    goes inside the class. And remember: the browser sketch stops at direct assign;
+    production UVM still uses config database patterns you will meet later.'
+- type: bullets
+  title: Your turn
+  bullets:
+  - Complete the checklist for at least one track , preferably both
+  - In the browser, load the UART starter, check all six wiring steps
+  - On paper, draw the signal path from class through virtual handle to DUT pin
+  - When you are ready
+  notes: Complete the checklist for at least one track — preferably both. In the browser,
+    load the UART starter, check all six wiring steps, and explain what breaks if
+    you skip assign. On paper, draw the signal path from class through virtual handle
+    to DUT pin. When you are ready, take the short quiz, then continue to class and
+    inheritance sketch in the next module.

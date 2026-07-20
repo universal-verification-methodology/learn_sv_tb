@@ -6,42 +6,61 @@
     {
       "id": "q1",
       "type": "multiple_choice",
-      "prompt": "This module is mainly about\u2026",
+      "prompt": "$readmemh primarily…",
       "choices": [
-        "File / vector I/O",
-        "Place-and-route only",
-        "Git only",
-        "Nothing"
+        "Loads hexadecimal words from a file into a memory array",
+        "Synthesizes the DUT from hex source",
+        "Replaces fork-join in testbenches",
+        "Assigns virtual interface handles"
       ],
       "answer": 0,
-      "explain": "File / vector I/O"
+      "explain": "readmemh fills an array from hex text at elaboration or time zero."
     },
     {
       "id": "q2",
-      "type": "true_false",
-      "prompt": "Browser labs replace full offline toolchains.",
-      "answer": false,
-      "explain": "Literacy only."
+      "type": "multiple_choice",
+      "prompt": "In a typical apply loop, after driving stim[i] you should…",
+      "choices": [
+        "Advance time, then compare DUT output to exp[i]",
+        "Immediately disable fork without waiting",
+        "Recompile the testbench for each vector",
+        "Skip the expected array entirely"
+      ],
+      "answer": 0,
+      "explain": "Inputs need time to settle before comparison against expected values."
     },
     {
       "id": "q3",
-      "type": "multiple_choice",
-      "prompt": "Primary practice id is\u2026",
-      "choices": [
-        "file-vector-io",
-        "vivado-only",
-        "gds-only",
-        "spice-only"
-      ],
-      "answer": 0,
-      "explain": "Lab id."
+      "type": "true_false",
+      "prompt": "Separating stimulus and expected vectors in files lets you swap test sets without recompiling the TB loop.",
+      "answer": true,
+      "explain": "The same apply loop replays different hex files."
     },
     {
       "id": "q4",
-      "type": "true_false",
-      "prompt": "learn_sv_tb follows the lab-driven pass-3 pattern.",
-      "answer": true,
-      "explain": "One module \u2248 one lab when possible."
+      "type": "multiple_choice",
+      "prompt": "An @addr directive in a hex file…",
+      "choices": [
+        "Sets the next write index for subsequent data lines",
+        "Declares a virtual interface modport",
+        "Forces join_any behavior",
+        "Converts binary digits to hex automatically"
+      ],
+      "answer": 0,
+      "explain": "@addr skips to a specific array index before loading words."
+    },
+    {
+      "id": "q5",
+      "type": "multiple_choice",
+      "prompt": "$readmemb differs from $readmemh because it expects…",
+      "choices": [
+        "Binary digits instead of hexadecimal",
+        "Only tasks, not functions",
+        "UVM config database paths",
+        "Synthesis attributes on each line"
+      ],
+      "answer": 0,
+      "explain": "readmemb loads binary; readmemh loads hex."
     }
   ]
 }

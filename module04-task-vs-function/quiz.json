@@ -6,42 +6,61 @@
     {
       "id": "q1",
       "type": "multiple_choice",
-      "prompt": "This module is mainly about\u2026",
+      "prompt": "A SystemVerilog task in a testbench…",
       "choices": [
-        "Task vs function",
-        "Place-and-route only",
-        "Git only",
-        "Nothing"
+        "May consume simulation time with delays or events",
+        "Must always return a value like a function",
+        "Is only legal inside always_comb blocks",
+        "Cannot drive signals on interface pins"
       ],
       "answer": 0,
-      "explain": "Task vs function"
+      "explain": "Tasks are procedural helpers that may wait; functions are zero-time."
     },
     {
       "id": "q2",
-      "type": "true_false",
-      "prompt": "Browser labs replace full offline toolchains.",
-      "answer": false,
-      "explain": "Literacy only."
+      "type": "multiple_choice",
+      "prompt": "A function differs from a task mainly because it…",
+      "choices": [
+        "Runs in zero simulation time and returns a value",
+        "Always synthesizes to flip-flops",
+        "Must contain fork-join blocks",
+        "Cannot be called from always_comb"
+      ],
+      "answer": 0,
+      "explain": "Functions cannot use #delay or @event; they return a value."
     },
     {
       "id": "q3",
-      "type": "multiple_choice",
-      "prompt": "Primary practice id is\u2026",
-      "choices": [
-        "task-vs-function",
-        "vivado-only",
-        "gds-only",
-        "spice-only"
-      ],
-      "answer": 0,
-      "explain": "Lab id."
+      "type": "true_false",
+      "prompt": "Putting a #delay inside a function is legal SystemVerilog.",
+      "answer": false,
+      "explain": "Functions must complete in zero time; delays belong in tasks."
     },
     {
       "id": "q4",
-      "type": "true_false",
-      "prompt": "learn_sv_tb follows the lab-driven pass-3 pattern.",
-      "answer": true,
-      "explain": "One module \u2248 one lab when possible."
+      "type": "multiple_choice",
+      "prompt": "always_ff and always_comb are primarily for…",
+      "choices": [
+        "Synthesizable RTL sequential and combinational logic",
+        "Replacing UVM sequence items",
+        "Loading hex stimulus files",
+        "Virtual interface assignment"
+      ],
+      "answer": 0,
+      "explain": "Always blocks describe hardware; tasks describe TB procedures."
+    },
+    {
+      "id": "q5",
+      "type": "multiple_choice",
+      "prompt": "When you need to wait two clock edges then drive a pin, use…",
+      "choices": [
+        "A task",
+        "A pure function",
+        "always_comb only",
+        "A generate for loop"
+      ],
+      "answer": 0,
+      "explain": "Waiting implies simulation time; tasks may consume time."
     }
   ]
 }

@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module09-crv-lite/frames/slide-1.png'
+duration 32.136
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module09-crv-lite/frames/slide-2.png'
+duration 35.304
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module09-crv-lite/frames/slide-3.png'
+duration 34.656
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module09-crv-lite/frames/slide-4.png'
+duration 36.288
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module09-crv-lite/frames/slide-5.png'
+duration 29.376
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module09-crv-lite/frames/slide-6.png'
+duration 22.344
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module09-crv-lite/frames/slide-6.png'

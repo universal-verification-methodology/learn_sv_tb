@@ -6,42 +6,48 @@
     {
       "id": "q1",
       "type": "multiple_choice",
-      "prompt": "This module is mainly about\u2026",
+      "prompt": "A coverpoint with bins low, mid, high, top over data[3:0] mainly…",
       "choices": [
-        "Coverpoint / bins",
-        "Place-and-route only",
-        "Git only",
-        "Nothing"
+        "Partitions the 4-bit field into named buckets for hit tracking",
+        "Replaces assertions",
+        "Forces randomize to succeed",
+        "Synthesizes extra hardware"
       ],
       "answer": 0,
-      "explain": "Coverpoint / bins"
+      "explain": "Bins group values; sampling increments hits so you can see what was exercised."
     },
     {
       "id": "q2",
-      "type": "true_false",
-      "prompt": "Browser labs replace full offline toolchains.",
-      "answer": false,
-      "explain": "Literacy only."
+      "type": "multiple_choice",
+      "prompt": "Sample value 5 hits which nibble bin in the starter sketch?",
+      "choices": [
+        "mid (values 4–7)",
+        "low (values 0–3)",
+        "top (values 12–15)",
+        "None—5 is illegal"
+      ],
+      "answer": 0,
+      "explain": "5 falls in the mid range; the starter already shows one mid hit from sample 5."
     },
     {
       "id": "q3",
       "type": "multiple_choice",
-      "prompt": "Primary practice id is\u2026",
+      "prompt": "A defined bin with zero hits after testing is called a…",
       "choices": [
-        "cover-bins",
-        "vivado-only",
-        "gds-only",
-        "spice-only"
+        "Hole (missing stimulus for that bin)",
+        "Cross product",
+        "Virtual interface",
+        "UVM phase"
       ],
       "answer": 0,
-      "explain": "Lab id."
+      "explain": "Holes flag coverage gaps—you may need directed tests to hit that bin."
     },
     {
       "id": "q4",
       "type": "true_false",
-      "prompt": "learn_sv_tb follows the lab-driven pass-3 pattern.",
+      "prompt": "If a sampled value is not in any bin, that indicates a modeling gap—not just low random effort.",
       "answer": true,
-      "explain": "One module \u2248 one lab when possible."
+      "explain": "Values outside all bins (e.g. FIFO level 6 in the fifo preset) are not tracked until bins are fixed."
     }
   ]
 }

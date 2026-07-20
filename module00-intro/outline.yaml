@@ -1,21 +1,70 @@
 title: Welcome to SV testbench
-footer: learn_sv_tb — welcome to sv testbench
+footer: learn_sv_tb — intro
 slides:
 - type: title
   title: Welcome to SV testbench
-  subtitle: Scaffold module — expand with module-slides when recording
-  notes: Welcome to Welcome to SV testbench. This is a scaffold transcript for learn_sv_tb.
+  subtitle: Welcome to learn SV testbench
+  notes: Welcome to learn SV testbench. This course builds directed SystemVerilog
+    testbench literacy—self-checking patterns, classes, constrained random, cover,
+    and SVA—before you jump into UVM or formal flows. The goal is vocabulary and habits
+    you can reuse in Icarus, Verilator, or a commercial simulator, not a full VIP
+    in the browser.
 - type: bullets
-  title: What you practice
+  title: What you'll build toward
   bullets:
-  - Primary surface - offline / bridge
-  - Track A - local / offline practice
-  - Track B - browser lab when shipped
-  notes: Practice both tracks when you can. Browser labs build intuition; offline builds fidelity.
+  - Compare directed TB to UVM
+  - Browser labs teach the idea fast
+  notes: Across eleven modules you'll map TB anatomy, write self-checks, generate
+    clock and reset, wire file and vector I/O, sketch classes and virtual interfaces,
+    taste CRV and cover bins, read SVA on a timeline, and compare directed TB to UVM.
+    Browser labs teach the idea fast; local sketches keep the fidelity you need when
+    a real compile fails.
 - type: bullets
-  title: Your turn
+  title: Two tracks, one idea
   bullets:
-  - Open EXAMPLES.md and work one prompt
-  - Open the browser lab if this module has a tool id
-  - Check off CHECKLIST.md
-  notes: Complete the checklist for at least one track, then take the short quiz.
+  - Track A is your local toolchain, SystemVerilog testbench files, Make or a course
+    script
+  - Track B is the platform's SV TB concept labs
+  - You may do either track, or both
+  - A good rhythm is browser first for the picture
+  notes: 'Track A is your local toolchain—SystemVerilog testbench files, Make or a
+    course script, and the HDL simulator you already use. Track B is the platform''s
+    SV TB concept labs: clickable sketches for anatomy, self-check, clock and reset,
+    and more. You may do either track, or both. A good rhythm is browser first for
+    the picture, then a short offline sketch for muscle memory.'
+- type: bullets
+  title: Set up Track A
+  bullets:
+  - Install the tools named in the course two-tracks doc
+  - Open this course folder and skim module READMEs as you go
+  - Run the course module self-check script when you want automated checklist feedback
+  - You are not expected to run a full UVM flow here
+  notes: 'Install the tools named in the course two-tracks doc—Icarus, Verilator,
+    or the browser HDL simulator sibling course if that is your entry point. Open
+    this course folder and skim module READMEs as you go. Optional: run the course
+    module self-check script when you want automated checklist feedback. You are not
+    expected to run a full UVM flow here.'
+- type: two_column
+  title: Set up Track B
+  left:
+  - From the monorepo
+  - Labs for TB anatomy, self-check, clock and reset, and later topics are shipped
+  - If you prefer, use the published tools site instead
+  - Either way, confirm you can reach the index, the next module sends you into TB
+    anatomy
+  right: assets/tools-index.png
+  notes: From the monorepo, serve the platform folder with a simple local web server,
+    then open the tools index and scroll to the SV testbench section. Labs for TB
+    anatomy, self-check, clock and reset, and later topics are shipped. If you prefer,
+    use the published tools site instead. Either way, confirm you can reach the index—the
+    next module sends you into TB anatomy.
+- type: bullets
+  title: How to move through modules
+  bullets:
+  - For each module
+  - Prefer Track B when you want graded challenges on structure and timing
+  - When you finish this intro checklist, continue to TB anatomy
+  notes: For each module, read the README for the outcome, pick a track—or both—then
+    work the checklist. Prefer Track B when you want graded challenges on structure
+    and timing; prefer Track A when you want compile-and-run fidelity. When you finish
+    this intro checklist, continue to TB anatomy.

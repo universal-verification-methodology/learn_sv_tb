@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module05-fork-join/frames/slide-1.png'
+duration 31.368
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module05-fork-join/frames/slide-2.png'
+duration 33.144
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module05-fork-join/frames/slide-3.png'
+duration 29.472
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module05-fork-join/frames/slide-4.png'
+duration 24.384
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module05-fork-join/frames/slide-5.png'
+duration 28.44
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module05-fork-join/frames/slide-6.png'
+duration 24.816
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module05-fork-join/frames/slide-6.png'

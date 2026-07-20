@@ -1,3 +1,31 @@
 # Module 12 — TB vs UVM map
 
-Scaffold transcript for learn_sv_tb. Expand with module-slides.
+**Module id:** module12-tb-vs-uvm-map
+**Lab:** tb-vs-uvm-map
+**Tracks:** A (local / offline) · B (browser lab)
+
+## Slide 1 — TB vs UVM map
+
+You have written flat directed testbenches—clock and reset, tasks, fork-join, classes, constraints, cover, and assertions. UVM reorganizes the same jobs under different names. Pin wiggle becomes a driver behind a virtual interface. Hard-coded vectors become sequences feeding a sequencer. Inline expects become scoreboards comparing transactions. This module is a side-by-side map so UVM vocabulary feels like a rename of work you already do, not a foreign language dropped on day one.
+
+## Slide 2 — Six pairs to connect
+
+The lab lines up six classic roles with UVM counterparts. Pin drive maps to driver plus virtual interface. Fixed stimulus lists map to sequence plus sequencer. Wire peeks with display map to monitor plus analysis port. Inline expect maps to scoreboard. One flat testbench module maps to environment plus agent hierarchy. Copy-paste reuse maps to factory overrides and packaged VIP. Click a pair and read the bridge sentence—it tells you why the UVM split exists, not just what the boxes are called. Starter loads UART transmit with pin drive already mapped so you see one complete bridge before you explore the rest.
+
+## Slide 3 — Browser lab
+
+![Browser lab starter](assets/lab-starter.png)
+
+In the browser lab track, open the TB versus UVM map and load the starter example. Left side shows classic directed testbench pieces; right side shows UVM roles. Click pin drive on the left and driver plus virtual interface on the right, then mark mapped when the bridge makes sense. Use the challenge panel to name which UVM block replaces a given classic habit. You are not running a UVM library here—just building the mental wiring before learn UVM twenty seventeen.
+
+## Slide 4 — Real shell practice
+
+In the real shell track, open this module's examples prompts. Pick one block you have already built—maybe a self-checking loop or a task that wiggles pins—and write one sentence for each side of the map: what you do today in directed style, and which UVM role would absorb that job. Optional stretch: sketch a tiny UART or GPIO stimulus block as a flat initial block, then list which lines would move into driver, monitor, or scoreboard if you refactored. No UVM compile required—the exercise is naming and boundaries.
+
+## Slide 5 — Pitfalls to watch
+
+Do not assume UVM replaces thinking— it replaces ad-hoc structure with reusable components. Do not map buzzwords without behavior; a scoreboard is not magic, it is predict versus observe on transactions. Do not skip directed TB fluency; UVM agents still drive pins through interfaces you already wired in earlier modules. And do not treat this sketch as a production testbench generator—it is a concept map. Real UVM still needs phases, objections, config database, and offline sim discipline.
+
+## Slide 6 — Your turn
+
+Complete the checklist for at least one track. In the browser, map all six pairs for the UART starter and clear two challenges without peeking at hints. On paper, take one habit from your own directed TB and write the UVM role that would own it. Take the short quiz, then open the wrap module to see where learn SV testbench hands off to UVM or formal.

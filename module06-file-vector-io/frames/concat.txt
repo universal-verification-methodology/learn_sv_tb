@@ -1,0 +1,13 @@
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module06-file-vector-io/frames/slide-1.png'
+duration 28.896
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module06-file-vector-io/frames/slide-2.png'
+duration 33.432
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module06-file-vector-io/frames/slide-3.png'
+duration 28.632
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module06-file-vector-io/frames/slide-4.png'
+duration 21.6
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module06-file-vector-io/frames/slide-5.png'
+duration 28.896
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module06-file-vector-io/frames/slide-6.png'
+duration 24.648
+file '/mnt/d/proj/designs/learning/courses/learn_sv_tb/module06-file-vector-io/frames/slide-6.png'

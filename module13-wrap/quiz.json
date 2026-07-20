@@ -6,42 +6,55 @@
     {
       "id": "q1",
       "type": "multiple_choice",
-      "prompt": "This module is mainly about\u2026",
+      "prompt": "After learn_sv_tb, a natural next course for UVM methodology is…",
       "choices": [
-        "SV TB complete",
-        "Place-and-route only",
-        "Git only",
-        "Nothing"
+        "learn_uvm2017",
+        "learn_spice_only",
+        "learn_place_route_only",
+        "No follow-on exists"
       ],
       "answer": 0,
-      "explain": "SV TB complete"
+      "explain": "The syllabus points SV TB graduates toward learn_uvm2017 for agents and sequences."
     },
     {
       "id": "q2",
-      "type": "true_false",
-      "prompt": "Browser labs replace full offline toolchains.",
-      "answer": false,
-      "explain": "Literacy only."
+      "type": "multiple_choice",
+      "prompt": "If you want bounded proofs and vacuity literacy after SVA timeline practice…",
+      "choices": [
+        "learn_formal",
+        "learn_git only",
+        "learn_unix only",
+        "No formal path exists"
+      ],
+      "answer": 0,
+      "explain": "learn_formal builds on SVA timeline skills from this course."
     },
     {
       "id": "q3",
-      "type": "multiple_choice",
-      "prompt": "Primary practice id is\u2026",
-      "choices": [
-        "wrap",
-        "vivado-only",
-        "gds-only",
-        "spice-only"
-      ],
-      "answer": 0,
-      "explain": "Lab id."
+      "type": "true_false",
+      "prompt": "Browser labs alone are enough to skip real-shell examples on the wrap checklist.",
+      "answer": false,
+      "explain": "The wrap asks you to close gaps on whichever track you leaned on less."
     },
     {
       "id": "q4",
+      "type": "multiple_choice",
+      "prompt": "Which skill belongs to the learn_sv_tb ladder you just finished?",
+      "choices": [
+        "Virtual interface wiring for class-based TB",
+        "Full commercial VIP licensing",
+        "GDSII DRC sign-off",
+        "Analog Monte Carlo SPICE"
+      ],
+      "answer": 0,
+      "explain": "Virtual interfaces were covered in module seven of this course."
+    },
+    {
+      "id": "q5",
       "type": "true_false",
-      "prompt": "learn_sv_tb follows the lab-driven pass-3 pattern.",
+      "prompt": "Directed TB fluency helps even if your next course is UVM.",
       "answer": true,
-      "explain": "One module \u2248 one lab when possible."
+      "explain": "UVM agents still drive pins through interfaces and checks you already practiced."
     }
   ]
 }

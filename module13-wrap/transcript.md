@@ -1,3 +1,31 @@
 # Module 13 — SV TB complete
 
-Scaffold transcript for learn_sv_tb. Expand with module-slides.
+**Module id:** module13-wrap
+**Lab:** none (wrap)
+**Tracks:** A · B (review)
+
+## Slide 1 — SV TB complete
+
+You started with testbench anatomy and self-checking patterns, walked clock and reset, tasks and fork-join, file vectors, virtual interfaces, classes, constrained random lite, coverpoints, SVA timelines, and the map to UVM roles. This wrap names what you can do now, where the browser and real-shell tracks complement each other, and sensible next courses—not a certificate speech, just an honest checkpoint before you leave learn SV testbench.
+
+## Slide 2 — What you can do now
+
+You can sketch a directed testbench with stimulus, observation, and self-check. You know when a task beats a function, how fork-join shapes parallel activity, and how a virtual interface wires a class to the DUT. You can read a simple constraint and cover hole, interpret overlapping versus next-cycle implication, and point at the UVM block that would replace a flat initial block. That is SV testbench literacy—not block sign-off, but vocabulary and judgment you keep into UVM, cocotb, or formal work.
+
+## Slide 3 — Close the track gaps
+
+If you leaned on browser labs, pick one module you skipped on the real shell track and run its examples check—or at least explain one prompt aloud without reading it. If you leaned on offline only, reopen one visual lab you avoided: cover bins, SVA timeline, or TB versus UVM map. Both tracks together beat either alone: sketches for speed, simulators for fidelity. Choose one weak skill, spend ten minutes, and teach it in two sentences to an imaginary teammate.
+
+## Slide 4 — Tools shelf for review
+
+![Tools index](assets/tools-index.png)
+
+The learning platform tools index lists every SV testbench sketch you touched—anatomy, self-check, clock reset, tasks, fork-join, file I/O, virtual interfaces, classes, constraints, cover, SVA timeline, and the UVM map. You do not need to re-clear every challenge; use the shelf as a spaced-review map. Open one lab you would not want to explain in a stand-up and spend ten minutes until you could. That beats racing forward with fuzzy memory of what a cover hole means.
+
+## Slide 5 — Where to go next
+
+learn UVM twenty seventeen is the natural next stop if your path is constrained-random testbenches with agents, sequences, and scoreboards—you already mapped the roles. learn formal fits if you want properties, vacuity, and bounded proofs starting from the SVA timeline you practiced here. learn cocotb is an alternative Python-first bench path. The syllabus learning ladder shows how these courses connect; pick one branch and carry the directed TB habits with you—readable checks, explicit reset, and skepticism toward green you cannot explain.
+
+## Slide 6 — Your turn
+
+Complete the wrap checklist honestly: one real-shell example you can explain, one browser lab you could teach aloud, and one sentence on when directed TB is enough versus when UVM or formal earns its overhead. Take the short quiz for this module. Then open your next course on the ladder—UVM, formal, or cocotb—and keep the discipline you built here: name what you check, show your waves, and question passes you cannot narrate.
