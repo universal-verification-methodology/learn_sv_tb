@@ -5,9 +5,10 @@ Track A prompts. Browser lab **`tb-clock-reset`** is shipped.
 ## Prompts
 
 1. Restate the core idea of **Clock + reset patterns** in one sentence.
-2. Sketch one worked example on paper (or in a tiny script / HDL file).
-3. Optional: map the same idea to a real cocotb / SV / formal tool you already use.
+2. In your own words, capture this beat: *Most sequential DUTs need a free-running clock and a reset sequence before stimulus. Classic pattern: initialize clock low, forever toggle with half-period delays; assert reset active-low, hold for N posedges, then…*
+3. Sketch sync reset release after two posedges with `rst_n` timing labeled.
+4. Say when async assert / sync deassert is preferred in one sentence.
 
 ## Stretch
 
-Redo the same idea in the **`tb-clock-reset`** starter challenges.
+When ready, redo the same idea in the **`tb-clock-reset`** starter challenges.

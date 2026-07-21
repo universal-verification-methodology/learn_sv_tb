@@ -2,7 +2,7 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-learn__sv__tb-181717?logo=github)](https://github.com/universal-verification-methodology/learn_sv_tb)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-green?logo=creativecommons&logoColor=white)](LICENSE)
-[![Role](https://img.shields.io/badge/role-course%20scaffold-orange)](https://github.com/universal-verification-methodology/learning)
+[![Role](https://img.shields.io/badge/role-pass%203%20course-0A9EDC)](https://github.com/universal-verification-methodology/learning)
 [![Parent](https://img.shields.io/badge/parent-learning%20monorepo-0A9EDC)](https://github.com/universal-verification-methodology/learning)
 [![Labs](https://img.shields.io/badge/labs-GitHub%20Pages-222?logo=githubpages)](https://universal-verification-methodology.github.io/learning/tools/)
 [![Domain](https://img.shields.io/badge/domain-SV%20TB%20%7C%20SVA%20%7C%20CRV-purple)](https://github.com/universal-verification-methodology/learn_sv_tb)
