@@ -25,15 +25,15 @@ In the real SystemVerilog track, open this module's examples prompts. Restate th
 ```systemverilog
 // Load vectors from hex files at time zero
 reg [7:0] stim [0:DEPTH-1];
-reg [7:0] exp  [0:DEPTH-1];
+reg [7:0] exp [0:DEPTH-1];
 initial begin
-  $readmemh("stim.hex", stim);
-  $readmemh("exp.hex",  exp);
-  for (int i = 0; i < N; i++) begin
-    apply(stim[i]);        // drive DUT inputs from word i
-    #1;
-    if (dut_out !== exp[i]) $error("FAIL @%0d", i);
-  end
+ $readmemh("stim.hex", stim);
+ $readmemh("exp.hex", exp);
+ for (int i = 0; i < N; i++) begin
+ apply(stim[i]); // drive DUT inputs from word i
+ #1;
+ if (dut_out !== exp[i]) $error("FAIL @%0d", i);
+ end
 end
 // stim.hex bit0=a bit1=b; exp.hex holds expected y
 ```

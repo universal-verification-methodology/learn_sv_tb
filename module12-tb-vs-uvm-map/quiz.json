@@ -1,66 +1,66 @@
 {
-  "module": "module12-tb-vs-uvm-map",
-  "title": "TB vs UVM map check",
-  "passing_score": 0.67,
-  "items": [
-    {
-      "id": "q1",
-      "type": "multiple_choice",
-      "prompt": "Classic pin wiggle in a directed TB maps most closely to…",
-      "choices": [
-        "Driver plus virtual interface",
-        "UVM factory only",
-        "Synthesis constraints",
-        "Place-and-route floorplan"
-      ],
-      "answer": 0,
-      "explain": "Procedural pin writes become a reusable driver behind a virtual interface."
-    },
-    {
-      "id": "q2",
-      "type": "multiple_choice",
-      "prompt": "Hard-coded stimulus vectors map most closely to…",
-      "choices": [
-        "Sequence plus sequencer",
-        "Scoreboard only",
-        "Covergroup bins",
-        "Formal induction"
-      ],
-      "answer": 0,
-      "explain": "Sequences generate items; the sequencer feeds the driver instead of nested tasks."
-    },
-    {
-      "id": "q3",
-      "type": "true_false",
-      "prompt": "The tb-vs-uvm-map browser lab runs a real UVM library simulation.",
-      "answer": false,
-      "explain": "It is a concept map for literacy, not a UVM runtime."
-    },
-    {
-      "id": "q4",
-      "type": "multiple_choice",
-      "prompt": "Inline expect checks in a flat TB map most closely to…",
-      "choices": [
-        "Scoreboard comparing predict versus observe",
-        "Clock generator only",
-        "Reset synchronizer",
-        "File readmemh loader"
-      ],
-      "answer": 0,
-      "explain": "Checks move to transaction-level predict versus actual on items."
-    },
-    {
-      "id": "q5",
-      "type": "multiple_choice",
-      "prompt": "The starter example in this lab uses…",
-      "choices": [
-        "UART transmit with pin drive already mapped",
-        "Full-chip PCIe VIP",
-        "Analog SPICE netlist",
-        "GDSII layout viewer"
-      ],
-      "answer": 0,
-      "explain": "Starter loads UART TX with pin-drive ↔ driver bridge selected."
-    }
-  ]
+ "module": "module12-tb-vs-uvm-map",
+ "title": "TB vs UVM map check",
+ "passing_score": 0.67,
+ "items": [
+ {
+ "id": "q1",
+ "type": "multiple_choice",
+ "prompt": "Classic pin wiggle in a directed TB maps most closely to…",
+ "choices": [
+ "Driver plus virtual interface",
+ "UVM factory only",
+ "Synthesis constraints",
+ "Place-and-route floorplan"
+ ],
+ "answer": 0,
+ "explain": "Procedural pin writes become a reusable driver behind a virtual interface."
+ },
+ {
+ "id": "q2",
+ "type": "multiple_choice",
+ "prompt": "Hard-coded stimulus vectors map most closely to…",
+ "choices": [
+ "Sequence plus sequencer",
+ "Scoreboard only",
+ "Covergroup bins",
+ "Formal induction"
+ ],
+ "answer": 0,
+ "explain": "Sequences generate items; the sequencer feeds the driver instead of nested tasks."
+ },
+ {
+ "id": "q3",
+ "type": "true_false",
+ "prompt": "The tb-vs-uvm-map browser lab runs a real UVM library simulation.",
+ "answer": false,
+ "explain": "It is a concept map for literacy, not a UVM runtime."
+ },
+ {
+ "id": "q4",
+ "type": "multiple_choice",
+ "prompt": "Inline expect checks in a flat TB map most closely to…",
+ "choices": [
+ "Scoreboard comparing predict versus observe",
+ "Clock generator only",
+ "Reset synchronizer",
+ "File readmemh loader"
+ ],
+ "answer": 0,
+ "explain": "Checks move to transaction-level predict versus actual on items."
+ },
+ {
+ "id": "q5",
+ "type": "multiple_choice",
+ "prompt": "The starter example in this lab uses…",
+ "choices": [
+ "UART transmit with pin drive already mapped",
+ "Full-chip PCIe VIP",
+ "Analog SPICE netlist",
+ "GDSII layout viewer"
+ ],
+ "answer": 0,
+ "explain": "Starter loads UART TX with pin-drive ↔ driver bridge selected."
+ }
+ ]
 }

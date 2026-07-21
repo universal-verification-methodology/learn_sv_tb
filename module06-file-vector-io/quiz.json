@@ -1,66 +1,66 @@
 {
-  "module": "module06-file-vector-io",
-  "title": "File / vector I/O check",
-  "passing_score": 0.67,
-  "items": [
-    {
-      "id": "q1",
-      "type": "multiple_choice",
-      "prompt": "$readmemh primarily…",
-      "choices": [
-        "Loads hexadecimal words from a file into a memory array",
-        "Synthesizes the DUT from hex source",
-        "Replaces fork-join in testbenches",
-        "Assigns virtual interface handles"
-      ],
-      "answer": 0,
-      "explain": "readmemh fills an array from hex text at elaboration or time zero."
-    },
-    {
-      "id": "q2",
-      "type": "multiple_choice",
-      "prompt": "In a typical apply loop, after driving stim[i] you should…",
-      "choices": [
-        "Advance time, then compare DUT output to exp[i]",
-        "Immediately disable fork without waiting",
-        "Recompile the testbench for each vector",
-        "Skip the expected array entirely"
-      ],
-      "answer": 0,
-      "explain": "Inputs need time to settle before comparison against expected values."
-    },
-    {
-      "id": "q3",
-      "type": "true_false",
-      "prompt": "Separating stimulus and expected vectors in files lets you swap test sets without recompiling the TB loop.",
-      "answer": true,
-      "explain": "The same apply loop replays different hex files."
-    },
-    {
-      "id": "q4",
-      "type": "multiple_choice",
-      "prompt": "An @addr directive in a hex file…",
-      "choices": [
-        "Sets the next write index for subsequent data lines",
-        "Declares a virtual interface modport",
-        "Forces join_any behavior",
-        "Converts binary digits to hex automatically"
-      ],
-      "answer": 0,
-      "explain": "@addr skips to a specific array index before loading words."
-    },
-    {
-      "id": "q5",
-      "type": "multiple_choice",
-      "prompt": "$readmemb differs from $readmemh because it expects…",
-      "choices": [
-        "Binary digits instead of hexadecimal",
-        "Only tasks, not functions",
-        "UVM config database paths",
-        "Synthesis attributes on each line"
-      ],
-      "answer": 0,
-      "explain": "readmemb loads binary; readmemh loads hex."
-    }
-  ]
+ "module": "module06-file-vector-io",
+ "title": "File / vector I/O check",
+ "passing_score": 0.67,
+ "items": [
+ {
+ "id": "q1",
+ "type": "multiple_choice",
+ "prompt": "$readmemh primarily…",
+ "choices": [
+ "Loads hexadecimal words from a file into a memory array",
+ "Synthesizes the DUT from hex source",
+ "Replaces fork-join in testbenches",
+ "Assigns virtual interface handles"
+ ],
+ "answer": 0,
+ "explain": "readmemh fills an array from hex text at elaboration or time zero."
+ },
+ {
+ "id": "q2",
+ "type": "multiple_choice",
+ "prompt": "In a typical apply loop, after driving stim[i] you should…",
+ "choices": [
+ "Advance time, then compare DUT output to exp[i]",
+ "Immediately disable fork without waiting",
+ "Recompile the testbench for each vector",
+ "Skip the expected array entirely"
+ ],
+ "answer": 0,
+ "explain": "Inputs need time to settle before comparison against expected values."
+ },
+ {
+ "id": "q3",
+ "type": "true_false",
+ "prompt": "Separating stimulus and expected vectors in files lets you swap test sets without recompiling the TB loop.",
+ "answer": true,
+ "explain": "The same apply loop replays different hex files."
+ },
+ {
+ "id": "q4",
+ "type": "multiple_choice",
+ "prompt": "An @addr directive in a hex file…",
+ "choices": [
+ "Sets the next write index for subsequent data lines",
+ "Declares a virtual interface modport",
+ "Forces join_any behavior",
+ "Converts binary digits to hex automatically"
+ ],
+ "answer": 0,
+ "explain": "@addr skips to a specific array index before loading words."
+ },
+ {
+ "id": "q5",
+ "type": "multiple_choice",
+ "prompt": "$readmemb differs from $readmemh because it expects…",
+ "choices": [
+ "Binary digits instead of hexadecimal",
+ "Only tasks, not functions",
+ "UVM config database paths",
+ "Synthesis attributes on each line"
+ ],
+ "answer": 0,
+ "explain": "readmemb loads binary; readmemh loads hex."
+ }
+ ]
 }

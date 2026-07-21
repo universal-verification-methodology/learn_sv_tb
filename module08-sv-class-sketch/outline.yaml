@@ -2,80 +2,80 @@ title: Class / inheritance sketch
 footer: learn_sv_tb — sv class sketch
 slides:
 - type: title
-  title: Class / inheritance sketch
-  subtitle: SystemVerilog testbenches lean on classes long before UVM
-  notes: 'SystemVerilog testbenches lean on classes long before UVM. Two trees matter:
-    objects hold transaction data you construct with new and pass by handle; components
-    live in a hierarchy with build and run roles. Inheritance with extends shares
-    fields and methods; children add protocol-specific members or override virtual
-    tasks. This module is diagram literacy—Packet to UartPacket on the object side,
-    Driver to UartDriver on the component side—so later CRV and UVM names feel familiar.'
+ title: Class / inheritance sketch
+ subtitle: SystemVerilog testbenches lean on classes long before UVM
+ notes: 'SystemVerilog testbenches lean on classes long before UVM. Two trees matter:
+ objects hold transaction data you construct with new and pass by handle; components
+ live in a hierarchy with build and run roles. Inheritance with extends shares
+ fields and methods; children add protocol-specific members or override virtual
+ tasks. This module is diagram literacy—Packet to UartPacket on the object side,
+ Driver to UartDriver on the component side—so later CRV and UVM names feel familiar.'
 - type: bullets
-  title: Objects versus components
-  bullets:
-  - On the object side, a base class carries a name
-  - Siblings like SpiPacket share the same parent but different extras
-  - On the component side, CompBase knows parent and name
-  - Objects are data handles you create and pass
-  - Extends means the child inherits every member unless it overrides a virtual method
-  notes: On the object side, a base class carries a name; Packet adds data and kind
-    fields; UartPacket extends Packet and adds parity. Siblings like SpiPacket share
-    the same parent but different extras—that is specialization, not duplication.
-    On the component side, CompBase knows parent and name; Agent, Driver, and Monitor
-    are peers under it; UartDriver extends Driver and overrides run for baud timing.
-    Objects are data handles you create and pass; components are structural nodes
-    you build once and then run. Extends means the child inherits every member unless
-    it overrides a virtual method.
+ title: Objects versus components
+ bullets:
+ - On the object side, a base class carries a name
+ - Siblings like SpiPacket share the same parent but different extras
+ - On the component side, CompBase knows parent and name
+ - Objects are data handles you create and pass
+ - Extends means the child inherits every member unless it overrides a virtual method
+ notes: On the object side, a base class carries a name; Packet adds data and kind
+ fields; UartPacket extends Packet and adds parity. Siblings like SpiPacket share
+ the same parent but different extras—that is specialization, not duplication.
+ On the component side, CompBase knows parent and name; Agent, Driver, and Monitor
+ are peers under it; UartDriver extends Driver and overrides run for baud timing.
+ Objects are data handles you create and pass; components are structural nodes
+ you build once and then run. Extends means the child inherits every member unless
+ it overrides a virtual method.
 - type: image
-  title: Browser lab
-  image: assets/lab-starter.png
-  caption: Browser lab starter
-  notes: In the browser lab track, open the class sketch lab and load the starter
-    with UartPacket selected on the object tree. Click classes in either tree—object
-    or component—and read fields, methods, and the extends chain. Switch to the component
-    tree and compare Agent, Driver, and Monitor roles. Expand the code sketch panel
-    and note how extends shares members. Work one challenge that names which tree
-    holds transactions versus hierarchy, then use Check.
+ title: Browser lab
+ image: assets/lab-starter.png
+ caption: Browser lab starter
+ notes: In the browser lab track, open the class sketch lab and load the starter
+ with UartPacket selected on the object tree. Click classes in either tree—object
+ or component—and read fields, methods, and the extends chain. Switch to the component
+ tree and compare Agent, Driver, and Monitor roles. Expand the code sketch panel
+ and note how extends shares members. Work one challenge that names which tree
+ holds transactions versus hierarchy, then use Check.
 - type: bullets
-  title: Real SV TB track practice
-  bullets:
-  - In the real track, open this module's examples prompts
-  - Restate the two trees in one sentence, objects for data, components for hierarchy
-  - On paper, sketch Packet with two children
-  - Then sketch CompBase with Driver and Monitor as siblings and UartDriver extending
-    Driver
-  - 'Optional: find one extends in a local testbench or UVM example and label parent
-    and child'
-  - No compile required, the goal is to read inheritance, not run a full class runtime
-  notes: 'In the real track, open this module''s examples prompts. Restate the two
-    trees in one sentence—objects for data, components for hierarchy. On paper, sketch
-    Packet with two children: UartPacket and SpiPacket, each listing one extra field.
-    Then sketch CompBase with Driver and Monitor as siblings and UartDriver extending
-    Driver with an override note on run. Optional: find one extends in a local testbench
-    or UVM example and label parent and child. No compile required—the goal is to
-    read inheritance, not run a full class runtime.'
+ title: Real SV TB track practice
+ bullets:
+ - In the real track, open this module's examples prompts
+ - Restate the two trees in one sentence, objects for data, components for hierarchy
+ - On paper, sketch Packet with two children
+ - Then sketch CompBase with Driver and Monitor as siblings and UartDriver extending
+ Driver
+ - 'Optional: find one extends in a local testbench or UVM example and label parent
+ and child'
+ - No compile required, the goal is to read inheritance, not run a full class runtime
+ notes: 'In the real track, open this module''s examples prompts. Restate the two
+ trees in one sentence—objects for data, components for hierarchy. On paper, sketch
+ Packet with two children: UartPacket and SpiPacket, each listing one extra field.
+ Then sketch CompBase with Driver and Monitor as siblings and UartDriver extending
+ Driver with an override note on run. Optional: find one extends in a local testbench
+ or UVM example and label parent and child. No compile required—the goal is to
+ read inheritance, not run a full class runtime.'
 - type: bullets
-  title: Pitfalls to watch
-  bullets:
-  - Do not treat every class as a component
-  - Do not copy fields into every child when extends already shares them
-  - Do not forget virtual when you mean override
-  - And remember
-  notes: 'Do not treat every class as a component—transaction objects are not in the
-    TB hierarchy tree. Do not copy fields into every child when extends already shares
-    them—that is what Packet is for. Do not forget virtual when you mean override—without
-    virtual, a child method hides rather than replaces parent behavior in polymorphic
-    calls. And remember: the browser lab is a diagram aid, not a SystemVerilog simulator
-    executing new and phases.'
+ title: Pitfalls to watch
+ bullets:
+ - Do not treat every class as a component
+ - Do not copy fields into every child when extends already shares them
+ - Do not forget virtual when you mean override
+ - And remember
+ notes: 'Do not treat every class as a component—transaction objects are not in the
+ TB hierarchy tree. Do not copy fields into every child when extends already shares
+ them—that is what Packet is for. Do not forget virtual when you mean override—without
+ virtual, a child method hides rather than replaces parent behavior in polymorphic
+ calls. And remember: the browser lab is a diagram aid, not a SystemVerilog simulator
+ executing new and phases.'
 - type: bullets
-  title: Your turn
-  bullets:
-  - Complete the checklist for at least one track, preferably both
-  - In the browser
-  - On paper, draw one object tree and one component tree with extends arrows labeled
-  - When you are ready
-  notes: Complete the checklist for at least one track—preferably both. In the browser,
-    select UartPacket and state what it inherits from Packet versus what it adds.
-    On paper, draw one object tree and one component tree with extends arrows labeled.
-    When you are ready, take the short quiz, then continue to constraint and random
-    lite in the next module.
+ title: Your turn
+ bullets:
+ - Complete the checklist for at least one track, preferably both
+ - In the browser
+ - On paper, draw one object tree and one component tree with extends arrows labeled
+ - When you are ready
+ notes: Complete the checklist for at least one track—preferably both. In the browser,
+ select UartPacket and state what it inherits from Packet versus what it adds.
+ On paper, draw one object tree and one component tree with extends arrows labeled.
+ When you are ready, take the short quiz, then continue to constraint and random
+ lite in the next module.

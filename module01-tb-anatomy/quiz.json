@@ -1,66 +1,66 @@
 {
-  "module": "module01-tb-anatomy",
-  "title": "TB anatomy check",
-  "passing_score": 0.67,
-  "items": [
-    {
-      "id": "q1",
-      "type": "multiple_choice",
-      "prompt": "In a classic Verilog TB, inputs driven in initial are usually…",
-      "choices": [
-        "reg or logic",
-        "inout only",
-        "supply0 nets",
-        "parameters"
-      ],
-      "answer": 0,
-      "explain": "Procedural assignment in initial requires reg/logic; wire is for continuous or DUT drive."
-    },
-    {
-      "id": "q2",
-      "type": "multiple_choice",
-      "prompt": "A DUT output observed by the TB is typically…",
-      "choices": [
-        "A wire or logic net the TB reads but does not procedural-assign",
-        "A reg the TB drives every cycle",
-        "A parameter copied from the DUT",
-        "A UDP primitive only"
-      ],
-      "answer": 0,
-      "explain": "The TB samples DUT outputs; driving them from initial is a mistake."
-    },
-    {
-      "id": "q3",
-      "type": "multiple_choice",
-      "prompt": "The DUT instance line in the TB mainly…",
-      "choices": [
-        "Connects TB nets to DUT ports",
-        "Replaces the need for stimulus",
-        "Runs synthesis automatically",
-        "Disables time delays"
-      ],
-      "answer": 0,
-      "explain": "Port connections wire stimulus and observe nets between TB and design."
-    },
-    {
-      "id": "q4",
-      "type": "true_false",
-      "prompt": "Procedural assignment to a wire in initial is a common beginner mistake.",
-      "answer": true,
-      "explain": "The wire-stimulus preset in the lab shows this compile/runtime trap."
-    },
-    {
-      "id": "q5",
-      "type": "multiple_choice",
-      "prompt": "$finish in the TB initial block…",
-      "choices": [
-        "Ends the simulation run",
-        "Synthesizes the DUT",
-        "Forces all outputs to zero permanently",
-        "Replaces the need for a clock"
-      ],
-      "answer": 0,
-      "explain": "finish stops simulation after checks and displays complete."
-    }
-  ]
+ "module": "module01-tb-anatomy",
+ "title": "TB anatomy check",
+ "passing_score": 0.67,
+ "items": [
+ {
+ "id": "q1",
+ "type": "multiple_choice",
+ "prompt": "In a classic Verilog TB, inputs driven in initial are usually…",
+ "choices": [
+ "reg or logic",
+ "inout only",
+ "supply0 nets",
+ "parameters"
+ ],
+ "answer": 0,
+ "explain": "Procedural assignment in initial requires reg/logic; wire is for continuous or DUT drive."
+ },
+ {
+ "id": "q2",
+ "type": "multiple_choice",
+ "prompt": "A DUT output observed by the TB is typically…",
+ "choices": [
+ "A wire or logic net the TB reads but does not procedural-assign",
+ "A reg the TB drives every cycle",
+ "A parameter copied from the DUT",
+ "A UDP primitive only"
+ ],
+ "answer": 0,
+ "explain": "The TB samples DUT outputs; driving them from initial is a mistake."
+ },
+ {
+ "id": "q3",
+ "type": "multiple_choice",
+ "prompt": "The DUT instance line in the TB mainly…",
+ "choices": [
+ "Connects TB nets to DUT ports",
+ "Replaces the need for stimulus",
+ "Runs synthesis automatically",
+ "Disables time delays"
+ ],
+ "answer": 0,
+ "explain": "Port connections wire stimulus and observe nets between TB and design."
+ },
+ {
+ "id": "q4",
+ "type": "true_false",
+ "prompt": "Procedural assignment to a wire in initial is a common beginner mistake.",
+ "answer": true,
+ "explain": "The wire-stimulus preset in the lab shows this compile/runtime trap."
+ },
+ {
+ "id": "q5",
+ "type": "multiple_choice",
+ "prompt": "$finish in the TB initial block…",
+ "choices": [
+ "Ends the simulation run",
+ "Synthesizes the DUT",
+ "Forces all outputs to zero permanently",
+ "Replaces the need for a clock"
+ ],
+ "answer": 0,
+ "explain": "finish stops simulation after checks and displays complete."
+ }
+ ]
 }

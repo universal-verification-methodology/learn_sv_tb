@@ -1,66 +1,66 @@
 {
-  "module": "module07-vif-wiring",
-  "title": "Virtual interface wiring check",
-  "passing_score": 0.67,
-  "items": [
-    {
-      "id": "q1",
-      "type": "multiple_choice",
-      "prompt": "A virtual interface inside a class is…",
-      "choices": [
-        "A handle pointing at a concrete interface instance in tb",
-        "A synthesizable module port list",
-        "A replacement for $readmemh",
-        "A fork-join synchronization primitive"
-      ],
-      "answer": 0,
-      "explain": "virtual if is a class-side pointer to signals bundled in an interface."
-    },
-    {
-      "id": "q2",
-      "type": "multiple_choice",
-      "prompt": "Before a driver task can do vif.tx <= v, you must…",
-      "choices": [
-        "Assign the virtual handle to the tb interface instance",
-        "Convert the class to a module",
-        "Load stim.hex into the class",
-        "Use join_none on the interface"
-      ],
-      "answer": 0,
-      "explain": "drv.vif = bif (or config_db) connects the class to real pins."
-    },
-    {
-      "id": "q3",
-      "type": "true_false",
-      "prompt": "You can pass module ports directly into a class constructor the same way you pass integers.",
-      "answer": false,
-      "explain": "Classes use virtual interface handles to reach hierarchical signals."
-    },
-    {
-      "id": "q4",
-      "type": "multiple_choice",
-      "prompt": "In the wiring checklist, DUT connection comes…",
-      "choices": [
-        "After interface declare and tb instance, before class drive",
-        "Only inside the driver class constructor",
-        "After all simulation time has elapsed",
-        "Before the interface is declared"
-      ],
-      "answer": 0,
-      "explain": "Declare IF → instance in tb → wire DUT → virtual in class → assign → drive."
-    },
-    {
-      "id": "q5",
-      "type": "multiple_choice",
-      "prompt": "Modports on an interface mainly help…",
-      "choices": [
-        "Restrict which directions each component may drive or sample",
-        "Load hex vectors faster",
-        "Replace always_ff blocks",
-        "Force tasks to return values"
-      ],
-      "answer": 0,
-      "explain": "Modports enforce driver vs monitor views of the same bundle."
-    }
-  ]
+ "module": "module07-vif-wiring",
+ "title": "Virtual interface wiring check",
+ "passing_score": 0.67,
+ "items": [
+ {
+ "id": "q1",
+ "type": "multiple_choice",
+ "prompt": "A virtual interface inside a class is…",
+ "choices": [
+ "A handle pointing at a concrete interface instance in tb",
+ "A synthesizable module port list",
+ "A replacement for $readmemh",
+ "A fork-join synchronization primitive"
+ ],
+ "answer": 0,
+ "explain": "virtual if is a class-side pointer to signals bundled in an interface."
+ },
+ {
+ "id": "q2",
+ "type": "multiple_choice",
+ "prompt": "Before a driver task can do vif.tx <= v, you must…",
+ "choices": [
+ "Assign the virtual handle to the tb interface instance",
+ "Convert the class to a module",
+ "Load stim.hex into the class",
+ "Use join_none on the interface"
+ ],
+ "answer": 0,
+ "explain": "drv.vif = bif (or config_db) connects the class to real pins."
+ },
+ {
+ "id": "q3",
+ "type": "true_false",
+ "prompt": "You can pass module ports directly into a class constructor the same way you pass integers.",
+ "answer": false,
+ "explain": "Classes use virtual interface handles to reach hierarchical signals."
+ },
+ {
+ "id": "q4",
+ "type": "multiple_choice",
+ "prompt": "In the wiring checklist, DUT connection comes…",
+ "choices": [
+ "After interface declare and tb instance, before class drive",
+ "Only inside the driver class constructor",
+ "After all simulation time has elapsed",
+ "Before the interface is declared"
+ ],
+ "answer": 0,
+ "explain": "Declare IF → instance in tb → wire DUT → virtual in class → assign → drive."
+ },
+ {
+ "id": "q5",
+ "type": "multiple_choice",
+ "prompt": "Modports on an interface mainly help…",
+ "choices": [
+ "Restrict which directions each component may drive or sample",
+ "Load hex vectors faster",
+ "Replace always_ff blocks",
+ "Force tasks to return values"
+ ],
+ "answer": 0,
+ "explain": "Modports enforce driver vs monitor views of the same bundle."
+ }
+ ]
 }

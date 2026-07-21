@@ -2,81 +2,81 @@ title: SVA implication timeline
 footer: learn_sv_tb — sva timeline
 slides:
 - type: title
-  title: SVA implication timeline
-  subtitle: You have built directed testbenches, classes, constraints, and coverpoints
-  notes: 'You have built directed testbenches, classes, constraints, and coverpoints.
-    Assertions are the next piece: they state what must stay true across clock cycles,
-    not just what one test vector checked. An implication reads as when the antecedent
-    is true, the consequent must hold on a chosen cycle. Overlapping pipe checks the
-    consequent in the same cycle; non-overlapping double arrow checks the next cycle.
-    This module is timeline literacy—pass, fail, and vacuous on a short wave—so you
-    can read SVA in a testbench or a formal sketch without getting lost in syntax.'
+ title: SVA implication timeline
+ subtitle: You have built directed testbenches, classes, constraints, and coverpoints
+ notes: 'You have built directed testbenches, classes, constraints, and coverpoints.
+ Assertions are the next piece: they state what must stay true across clock cycles,
+ not just what one test vector checked. An implication reads as when the antecedent
+ is true, the consequent must hold on a chosen cycle. Overlapping pipe checks the
+ consequent in the same cycle; non-overlapping double arrow checks the next cycle.
+ This module is timeline literacy—pass, fail, and vacuous on a short wave—so you
+ can read SVA in a testbench or a formal sketch without getting lost in syntax.'
 - type: bullets
-  title: Overlap, next cycle, and vacuous
-  bullets:
-  - Here is the starter picture
-  - Antecedent a and consequent b both high at cycle two under overlapping implication
-  - Shift b one cycle later and overlapping fails while non-overlapping can pass
-  - If a never goes high
-  - The lab presets walk overlap pass, overlap fail, next-cycle pass, next-cycle fail
-  - Rebuild after you change operator or waves so the verdict panel updates before
-    you trust
-  notes: Here is the starter picture. Antecedent a and consequent b both high at cycle
-    two under overlapping implication—that is a pass. Shift b one cycle later and
-    overlapping fails while non-overlapping can pass. If a never goes high, no attempt
-    fires and the property is vacuously satisfied—technically green, but it proved
-    nothing about b. The lab presets walk overlap pass, overlap fail, next-cycle pass,
-    next-cycle fail, and the all-zero-a vacuous case. Rebuild after you change operator
-    or waves so the verdict panel updates before you trust the color.
+ title: Overlap, next cycle, and vacuous
+ bullets:
+ - Here is the starter picture
+ - Antecedent a and consequent b both high at cycle two under overlapping implication
+ - Shift b one cycle later and overlapping fails while non-overlapping can pass
+ - If a never goes high
+ - The lab presets walk overlap pass, overlap fail, next-cycle pass, next-cycle fail
+ - Rebuild after you change operator or waves so the verdict panel updates before
+ you trust
+ notes: Here is the starter picture. Antecedent a and consequent b both high at cycle
+ two under overlapping implication—that is a pass. Shift b one cycle later and
+ overlapping fails while non-overlapping can pass. If a never goes high, no attempt
+ fires and the property is vacuously satisfied—technically green, but it proved
+ nothing about b. The lab presets walk overlap pass, overlap fail, next-cycle pass,
+ next-cycle fail, and the all-zero-a vacuous case. Rebuild after you change operator
+ or waves so the verdict panel updates before you trust the color.
 - type: image
-  title: Browser lab
-  image: assets/lab-starter.png
-  caption: Browser lab starter
-  notes: In the browser lab track, open the SVA timeline sketch and load the starter
-    example. You will see short waves for a and b, a cursor on the evaluation cycle,
-    and a verdict naming pass, fail, or vacuous. Try presets to compare overlapping
-    versus next-cycle behavior, then use the challenge panel to quiz yourself on which
-    operator matches which cycle rule. Step the cursor and rebuild until you can predict
-    the verdict before you press Check.
+ title: Browser lab
+ image: assets/lab-starter.png
+ caption: Browser lab starter
+ notes: In the browser lab track, open the SVA timeline sketch and load the starter
+ example. You will see short waves for a and b, a cursor on the evaluation cycle,
+ and a verdict naming pass, fail, or vacuous. Try presets to compare overlapping
+ versus next-cycle behavior, then use the challenge panel to quiz yourself on which
+ operator matches which cycle rule. Step the cursor and rebuild until you can predict
+ the verdict before you press Check.
 - type: bullets
-  title: Real shell practice
-  bullets:
-  - In the real shell track, open this module's examples prompts
-  - Restate the timeline idea in one sentence
-  - Sketch one worked example on paper
-  - Optional stretch
-  - No full simulator run required yet, the goal is to read SVA timing in your head
-  notes: 'In the real shell track, open this module''s examples prompts. Restate the
-    timeline idea in one sentence—when a is true, b must hold on the cycle the operator
-    chooses. Sketch one worked example on paper: draw eight cycles, mark a and b,
-    and label pass or fail for both overlapping and non-overlapping implication at
-    the cycle where a first rises. Optional stretch: write a property block you would
-    drop into a self-checking testbench later. No full simulator run required yet—the
-    goal is to read SVA timing in your head.'
+ title: Real shell practice
+ bullets:
+ - In the real shell track, open this module's examples prompts
+ - Restate the timeline idea in one sentence
+ - Sketch one worked example on paper
+ - Optional stretch
+ - No full simulator run required yet, the goal is to read SVA timing in your head
+ notes: 'In the real shell track, open this module''s examples prompts. Restate the
+ timeline idea in one sentence—when a is true, b must hold on the cycle the operator
+ chooses. Sketch one worked example on paper: draw eight cycles, mark a and b,
+ and label pass or fail for both overlapping and non-overlapping implication at
+ the cycle where a first rises. Optional stretch: write a property block you would
+ drop into a self-checking testbench later. No full simulator run required yet—the
+ goal is to read SVA timing in your head.'
 - type: bullets
-  title: Pitfalls to watch
-  bullets:
-  - Do not treat overlapping and next-cycle operators as interchangeable
-  - Do not celebrate vacuous green as a design win
-  - Do not confuse this sketch with full SVA sequences and repetitions
-  - And remember
-  notes: 'Do not treat overlapping and next-cycle operators as interchangeable—they
-    differ by exactly one cycle. Do not celebrate vacuous green as a design win; if
-    the antecedent never fires, you learned nothing about the consequent. Do not confuse
-    this sketch with full SVA sequences and repetitions—that comes in formal and advanced
-    TB courses. And remember: the browser animator is conceptual; a real testbench
-    still needs clocking, reset, and sensible sampling behind the scenes.'
+ title: Pitfalls to watch
+ bullets:
+ - Do not treat overlapping and next-cycle operators as interchangeable
+ - Do not celebrate vacuous green as a design win
+ - Do not confuse this sketch with full SVA sequences and repetitions
+ - And remember
+ notes: 'Do not treat overlapping and next-cycle operators as interchangeable—they
+ differ by exactly one cycle. Do not celebrate vacuous green as a design win; if
+ the antecedent never fires, you learned nothing about the consequent. Do not confuse
+ this sketch with full SVA sequences and repetitions—that comes in formal and advanced
+ TB courses. And remember: the browser animator is conceptual; a real testbench
+ still needs clocking, reset, and sensible sampling behind the scenes.'
 - type: bullets
-  title: Your turn
-  bullets:
-  - Complete the checklist for at least one track, preferably both
-  - In the browser, load starter, run the overlap pass and vacuous presets
-  - On paper, draw one eight-cycle wave and mark where each operator would pass or
-    fail
-  - When you are ready, take the short quiz, then continue to the testbench versus
-    UVM map
-  notes: Complete the checklist for at least one track—preferably both. In the browser,
-    load starter, run the overlap pass and vacuous presets, and clear a couple of
-    challenges on bar arrow versus double arrow. On paper, draw one eight-cycle wave
-    and mark where each operator would pass or fail. When you are ready, take the
-    short quiz, then continue to the testbench versus UVM map.
+ title: Your turn
+ bullets:
+ - Complete the checklist for at least one track, preferably both
+ - In the browser, load starter, run the overlap pass and vacuous presets
+ - On paper, draw one eight-cycle wave and mark where each operator would pass or
+ fail
+ - When you are ready, take the short quiz, then continue to the testbench versus
+ UVM map
+ notes: Complete the checklist for at least one track—preferably both. In the browser,
+ load starter, run the overlap pass and vacuous presets, and clear a couple of
+ challenges on bar arrow versus double arrow. On paper, draw one eight-cycle wave
+ and mark where each operator would pass or fail. When you are ready, take the
+ short quiz, then continue to the testbench versus UVM map.

@@ -25,20 +25,20 @@ In the real SystemVerilog track, open this module's examples prompts. Restate th
 ```systemverilog
 // 1–2: declare + instantiate in tb
 interface uart_if(input logic clk);
-  logic tx, rx;
+ logic tx, rx;
 endinterface
 module tb;
-  logic clk;
-  uart_if bif(.clk(clk));
-  uart_tx dut(.clk(bif.clk), .tx(bif.tx));
+ logic clk;
+ uart_if bif(.clk(clk));
+ uart_tx dut(.clk(bif.clk), .tx(bif.tx));
 
 // 3–4: virtual handle in class
 class uart_driver;
-  virtual uart_if vif;
-  task drive_bit(bit v);
-    @(posedge vif.clk);
-    vif.tx <= v;
-  endtask
+ virtual uart_if vif;
+ task drive_bit(bit v);
+ @(posedge vif.clk);
+ vif.tx <= v;
+ endtask
 endclass
 
 // 5: assign handle before use

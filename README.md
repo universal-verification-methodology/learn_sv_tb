@@ -28,10 +28,10 @@ learn_sv_tb/
 ├── README.md
 ├── LICENSE
 ├── docs/
-│   ├── MODULES.md
-│   └── TWO_TRACKS.md
+│ ├── MODULES.md
+│ └── TWO_TRACKS.md
 ├── scripts/
-│   └── module.sh
+│ └── module.sh
 ├── module00-intro/
 ├── module01-tb-anatomy/
 ├── module02-self-check-tb/
@@ -53,7 +53,7 @@ learn_sv_tb/
 
 ```bash
 git clone --recurse-submodules \
-  git@github.com:universal-verification-methodology/learning.git
+ git@github.com:universal-verification-methodology/learning.git
 ls courses/learn_sv_tb
 ./scripts/module.sh 01 --check
 ```
@@ -61,11 +61,11 @@ ls courses/learn_sv_tb
 ## Author: module-slides
 
 ```bash
-cd ../..   # monorepo root
+cd ../.. # monorepo root
 python .cursor/skills/module-slides/scripts/transcript_to_outline.py \
-  courses/learn_sv_tb/module01-tb-anatomy
+ courses/learn_sv_tb/module01-tb-anatomy
 bash .cursor/skills/module-slides/scripts/narrate_clips.sh \
-  courses/learn_sv_tb/module01-tb-anatomy
+ courses/learn_sv_tb/module01-tb-anatomy
 ```
 
 ## Two learning tracks

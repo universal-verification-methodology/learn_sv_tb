@@ -1,66 +1,66 @@
 {
-  "module": "module11-sva-timeline",
-  "title": "SVA implication timeline check",
-  "passing_score": 0.67,
-  "items": [
-    {
-      "id": "q1",
-      "type": "multiple_choice",
-      "prompt": "Overlapping implication checks the consequent…",
-      "choices": [
-        "In the same cycle as the antecedent",
-        "Two cycles after the antecedent",
-        "Only at reset",
-        "Never—overlap is invalid SVA"
-      ],
-      "answer": 0,
-      "explain": "Bar-arrow implication evaluates b in the same cycle where a is true."
-    },
-    {
-      "id": "q2",
-      "type": "multiple_choice",
-      "prompt": "Non-overlapping implication checks the consequent…",
-      "choices": [
-        "On the next cycle after the antecedent",
-        "In the same cycle as the antecedent",
-        "Only when both are low",
-        "Only during reset"
-      ],
-      "answer": 0,
-      "explain": "Double-arrow implication shifts the check to the cycle after a is true."
-    },
-    {
-      "id": "q3",
-      "type": "true_false",
-      "prompt": "If antecedent a never goes high, an implication can be vacuously satisfied.",
-      "answer": true,
-      "explain": "No failing attempt occurs when a never fires—green but uninformative about b."
-    },
-    {
-      "id": "q4",
-      "type": "multiple_choice",
-      "prompt": "In the starter overlap pass preset, both a and b are high at…",
-      "choices": [
-        "Cycle 2",
-        "Cycle 0 only",
-        "Every cycle",
-        "Never—starter is always fail"
-      ],
-      "answer": 0,
-      "explain": "Starter loads overlapping pass with a and b high together at cycle 2."
-    },
-    {
-      "id": "q5",
-      "type": "multiple_choice",
-      "prompt": "The sva-timeline browser lab is mainly for…",
-      "choices": [
-        "Reading pass, fail, and vacuous on short waves",
-        "Running full-chip UVM regressions",
-        "Synthesizing to GDSII",
-        "Replacing all offline simulators"
-      ],
-      "answer": 0,
-      "explain": "The lab is a concept sketch for timeline literacy in SV testbench work."
-    }
-  ]
+ "module": "module11-sva-timeline",
+ "title": "SVA implication timeline check",
+ "passing_score": 0.67,
+ "items": [
+ {
+ "id": "q1",
+ "type": "multiple_choice",
+ "prompt": "Overlapping implication checks the consequent…",
+ "choices": [
+ "In the same cycle as the antecedent",
+ "Two cycles after the antecedent",
+ "Only at reset",
+ "Never—overlap is invalid SVA"
+ ],
+ "answer": 0,
+ "explain": "Bar-arrow implication evaluates b in the same cycle where a is true."
+ },
+ {
+ "id": "q2",
+ "type": "multiple_choice",
+ "prompt": "Non-overlapping implication checks the consequent…",
+ "choices": [
+ "On the next cycle after the antecedent",
+ "In the same cycle as the antecedent",
+ "Only when both are low",
+ "Only during reset"
+ ],
+ "answer": 0,
+ "explain": "Double-arrow implication shifts the check to the cycle after a is true."
+ },
+ {
+ "id": "q3",
+ "type": "true_false",
+ "prompt": "If antecedent a never goes high, an implication can be vacuously satisfied.",
+ "answer": true,
+ "explain": "No failing attempt occurs when a never fires—green but uninformative about b."
+ },
+ {
+ "id": "q4",
+ "type": "multiple_choice",
+ "prompt": "In the starter overlap pass preset, both a and b are high at…",
+ "choices": [
+ "Cycle 2",
+ "Cycle 0 only",
+ "Every cycle",
+ "Never—starter is always fail"
+ ],
+ "answer": 0,
+ "explain": "Starter loads overlapping pass with a and b high together at cycle 2."
+ },
+ {
+ "id": "q5",
+ "type": "multiple_choice",
+ "prompt": "The sva-timeline browser lab is mainly for…",
+ "choices": [
+ "Reading pass, fail, and vacuous on short waves",
+ "Running full-chip UVM regressions",
+ "Synthesizing to GDSII",
+ "Replacing all offline simulators"
+ ],
+ "answer": 0,
+ "explain": "The lab is a concept sketch for timeline literacy in SV testbench work."
+ }
+ ]
 }

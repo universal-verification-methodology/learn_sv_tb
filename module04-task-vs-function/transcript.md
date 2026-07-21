@@ -25,13 +25,13 @@ In the real SystemVerilog track, open this module's examples prompts. Restate th
 ```systemverilog
 // task — may wait; drives pins over time
 task automatic drive_bit(input bit b);
-  @(posedge clk);
-  din <= b;
+ @(posedge clk);
+ din <= b;
 endtask
 
 // function — zero time; returns a value
 function automatic logic [7:0] add8(input logic [7:0] a, b);
-  return a + b;
+ return a + b;
 endfunction
 
 // always_ff — sequential RTL (flip-flops)

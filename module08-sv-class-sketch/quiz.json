@@ -1,53 +1,53 @@
 {
-  "module": "module08-sv-class-sketch",
-  "title": "Class / inheritance sketch check",
-  "passing_score": 0.67,
-  "items": [
-    {
-      "id": "q1",
-      "type": "multiple_choice",
-      "prompt": "In SV TB OOP literacy, transaction data usually lives in…",
-      "choices": [
-        "Object / transaction classes (e.g. Packet, UartPacket)",
-        "Only module ports",
-        "The timescale directive",
-        "Synthesis attributes"
-      ],
-      "answer": 0,
-      "explain": "Objects hold data you construct with new and pass by handle; components form hierarchy."
-    },
-    {
-      "id": "q2",
-      "type": "multiple_choice",
-      "prompt": "UartPacket extends Packet mainly means…",
-      "choices": [
-        "UartPacket inherits Packet fields/methods and adds UART-specific members",
-        "Packet is deleted when UartPacket is created",
-        "Both classes must share the same parent component",
-        "extends only works in modules, not classes"
-      ],
-      "answer": 0,
-      "explain": "extends shares members; children specialize with extra fields or overridden virtual methods."
-    },
-    {
-      "id": "q3",
-      "type": "multiple_choice",
-      "prompt": "Driver and Monitor under CompBase are best described as…",
-      "choices": [
-        "Sibling components with different roles in the hierarchy",
-        "Two names for the same object handle",
-        "Always children of UartPacket",
-        "Only used in synthesis"
-      ],
-      "answer": 0,
-      "explain": "Components are hierarchy nodes—peers under a base with distinct run/build roles."
-    },
-    {
-      "id": "q4",
-      "type": "true_false",
-      "prompt": "The browser class-sketch lab is diagram literacy—not a full SystemVerilog class runtime.",
-      "answer": true,
-      "explain": "It teaches trees and extends; real simulators execute new, phases, and polymorphism."
-    }
-  ]
+ "module": "module08-sv-class-sketch",
+ "title": "Class / inheritance sketch check",
+ "passing_score": 0.67,
+ "items": [
+ {
+ "id": "q1",
+ "type": "multiple_choice",
+ "prompt": "In SV TB OOP literacy, transaction data usually lives in…",
+ "choices": [
+ "Object / transaction classes (e.g. Packet, UartPacket)",
+ "Only module ports",
+ "The timescale directive",
+ "Synthesis attributes"
+ ],
+ "answer": 0,
+ "explain": "Objects hold data you construct with new and pass by handle; components form hierarchy."
+ },
+ {
+ "id": "q2",
+ "type": "multiple_choice",
+ "prompt": "UartPacket extends Packet mainly means…",
+ "choices": [
+ "UartPacket inherits Packet fields/methods and adds UART-specific members",
+ "Packet is deleted when UartPacket is created",
+ "Both classes must share the same parent component",
+ "extends only works in modules, not classes"
+ ],
+ "answer": 0,
+ "explain": "extends shares members; children specialize with extra fields or overridden virtual methods."
+ },
+ {
+ "id": "q3",
+ "type": "multiple_choice",
+ "prompt": "Driver and Monitor under CompBase are best described as…",
+ "choices": [
+ "Sibling components with different roles in the hierarchy",
+ "Two names for the same object handle",
+ "Always children of UartPacket",
+ "Only used in synthesis"
+ ],
+ "answer": 0,
+ "explain": "Components are hierarchy nodes—peers under a base with distinct run/build roles."
+ },
+ {
+ "id": "q4",
+ "type": "true_false",
+ "prompt": "The browser class-sketch lab is diagram literacy—not a full SystemVerilog class runtime.",
+ "answer": true,
+ "explain": "It teaches trees and extends; real simulators execute new, phases, and polymorphism."
+ }
+ ]
 }

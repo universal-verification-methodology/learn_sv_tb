@@ -1,53 +1,53 @@
 {
-  "module": "module09-crv-lite",
-  "title": "Constraint / random lite check",
-  "passing_score": 0.67,
-  "items": [
-    {
-      "id": "q1",
-      "type": "multiple_choice",
-      "prompt": "constraint c_range { data inside {[0:15]}; } means…",
-      "choices": [
-        "Only values 0–15 are legal for rand data",
-        "data is always zero",
-        "randomize ignores constraints",
-        "data must equal 15 every roll"
-      ],
-      "answer": 0,
-      "explain": "inside shrinks the legal set; randomize picks from values that satisfy all hard constraints."
-    },
-    {
-      "id": "q2",
-      "type": "multiple_choice",
-      "prompt": "When hard constraints have no legal intersection, randomize…",
-      "choices": [
-        "Fails (returns 0 / false)",
-        "Always picks zero",
-        "Ignores one constraint silently",
-        "Only fails in the browser lab"
-      ],
-      "answer": 0,
-      "explain": "Over-constraining yields an empty legal set—same story in real CRV solvers."
-    },
-    {
-      "id": "q3",
-      "type": "multiple_choice",
-      "prompt": "Fixing a seed before randomize mainly helps you…",
-      "choices": [
-        "Replay the same sample sequence for debug",
-        "Disable all constraints",
-        "Force every field to maximum value",
-        "Skip coverage collection"
-      ],
-      "answer": 0,
-      "explain": "Reproducible rolls make failure replay and regression comparison practical."
-    },
-    {
-      "id": "q4",
-      "type": "true_false",
-      "prompt": "The crv-lite browser lab uses a tiny discrete legal set—not a full commercial constraint solver.",
-      "answer": true,
-      "explain": "Vocabulary matches real CRV; the implementation is dice-level for literacy."
-    }
-  ]
+ "module": "module09-crv-lite",
+ "title": "Constraint / random lite check",
+ "passing_score": 0.67,
+ "items": [
+ {
+ "id": "q1",
+ "type": "multiple_choice",
+ "prompt": "constraint c_range { data inside {[0:15]}; } means…",
+ "choices": [
+ "Only values 0–15 are legal for rand data",
+ "data is always zero",
+ "randomize ignores constraints",
+ "data must equal 15 every roll"
+ ],
+ "answer": 0,
+ "explain": "inside shrinks the legal set; randomize picks from values that satisfy all hard constraints."
+ },
+ {
+ "id": "q2",
+ "type": "multiple_choice",
+ "prompt": "When hard constraints have no legal intersection, randomize…",
+ "choices": [
+ "Fails (returns 0 / false)",
+ "Always picks zero",
+ "Ignores one constraint silently",
+ "Only fails in the browser lab"
+ ],
+ "answer": 0,
+ "explain": "Over-constraining yields an empty legal set—same story in real CRV solvers."
+ },
+ {
+ "id": "q3",
+ "type": "multiple_choice",
+ "prompt": "Fixing a seed before randomize mainly helps you…",
+ "choices": [
+ "Replay the same sample sequence for debug",
+ "Disable all constraints",
+ "Force every field to maximum value",
+ "Skip coverage collection"
+ ],
+ "answer": 0,
+ "explain": "Reproducible rolls make failure replay and regression comparison practical."
+ },
+ {
+ "id": "q4",
+ "type": "true_false",
+ "prompt": "The crv-lite browser lab uses a tiny discrete legal set—not a full commercial constraint solver.",
+ "answer": true,
+ "explain": "Vocabulary matches real CRV; the implementation is dice-level for literacy."
+ }
+ ]
 }

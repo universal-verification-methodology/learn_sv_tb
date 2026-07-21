@@ -1,66 +1,66 @@
 {
-  "module": "module02-self-check-tb",
-  "title": "Self-checking TB check",
-  "passing_score": 0.67,
-  "items": [
-    {
-      "id": "q1",
-      "type": "multiple_choice",
-      "prompt": "Self-checking means the TB…",
-      "choices": [
-        "Compares DUT output to an independently computed expect",
-        "Only prints waves for human eyeballing",
-        "Copies DUT output into expect automatically",
-        "Skips all error reporting"
-      ],
-      "answer": 0,
-      "explain": "Golden expect must not be copied from the sampled DUT output."
-    },
-    {
-      "id": "q2",
-      "type": "multiple_choice",
-      "prompt": "When got does not equal expect, the usual response is…",
-      "choices": [
-        "$error or equivalent fail reporting",
-        "Silent pass",
-        "Delete the DUT instance",
-        "Disable the clock forever"
-      ],
-      "answer": 0,
-      "explain": "Explicit fail paths make regressions visible."
-    },
-    {
-      "id": "q3",
-      "type": "multiple_choice",
-      "prompt": "A golden model in directed TB is…",
-      "choices": [
-        "A reference function separate from the DUT output",
-        "The waveform viewer cursor",
-        "The synthesis netlist",
-        "The same net as DUT y wired in a circle"
-      ],
-      "answer": 0,
-      "explain": "Expect comes from a model—bitwise AND, add, mux select—not from reading y first."
-    },
-    {
-      "id": "q4",
-      "type": "true_false",
-      "prompt": "Setting expect equal to the DUT output you just read is a valid self-check.",
-      "answer": false,
-      "explain": "That tautology checks nothing; expect must be computed independently."
-    },
-    {
-      "id": "q5",
-      "type": "multiple_choice",
-      "prompt": "Before comparing combinational outputs, the TB typically…",
-      "choices": [
-        "Waits a delay or clock edge so signals settle",
-        "Removes all initial blocks",
-        "Forces reset high permanently",
-        "Skips stimulus entirely"
-      ],
-      "answer": 0,
-      "explain": "Sample after #1 or posedge so got reflects settled logic."
-    }
-  ]
+ "module": "module02-self-check-tb",
+ "title": "Self-checking TB check",
+ "passing_score": 0.67,
+ "items": [
+ {
+ "id": "q1",
+ "type": "multiple_choice",
+ "prompt": "Self-checking means the TB…",
+ "choices": [
+ "Compares DUT output to an independently computed expect",
+ "Only prints waves for human eyeballing",
+ "Copies DUT output into expect automatically",
+ "Skips all error reporting"
+ ],
+ "answer": 0,
+ "explain": "Golden expect must not be copied from the sampled DUT output."
+ },
+ {
+ "id": "q2",
+ "type": "multiple_choice",
+ "prompt": "When got does not equal expect, the usual response is…",
+ "choices": [
+ "$error or equivalent fail reporting",
+ "Silent pass",
+ "Delete the DUT instance",
+ "Disable the clock forever"
+ ],
+ "answer": 0,
+ "explain": "Explicit fail paths make regressions visible."
+ },
+ {
+ "id": "q3",
+ "type": "multiple_choice",
+ "prompt": "A golden model in directed TB is…",
+ "choices": [
+ "A reference function separate from the DUT output",
+ "The waveform viewer cursor",
+ "The synthesis netlist",
+ "The same net as DUT y wired in a circle"
+ ],
+ "answer": 0,
+ "explain": "Expect comes from a model—bitwise AND, add, mux select—not from reading y first."
+ },
+ {
+ "id": "q4",
+ "type": "true_false",
+ "prompt": "Setting expect equal to the DUT output you just read is a valid self-check.",
+ "answer": false,
+ "explain": "That tautology checks nothing; expect must be computed independently."
+ },
+ {
+ "id": "q5",
+ "type": "multiple_choice",
+ "prompt": "Before comparing combinational outputs, the TB typically…",
+ "choices": [
+ "Waits a delay or clock edge so signals settle",
+ "Removes all initial blocks",
+ "Forces reset high permanently",
+ "Skips stimulus entirely"
+ ],
+ "answer": 0,
+ "explain": "Sample after #1 or posedge so got reflects settled logic."
+ }
+ ]
 }

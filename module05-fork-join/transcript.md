@@ -25,10 +25,10 @@ In the real SystemVerilog track, open this module's examples prompts. Restate wh
 ```systemverilog
 // fork-join — parent waits for ALL children (max time)
 fork
-  begin #30; $display("A done"); end
-  begin #10; $display("B done"); end
+ begin #30; $display("A done"); end
+ begin #10; $display("B done"); end
 join
-$display("parent resumes");  // at t=30 under join
+$display("parent resumes"); // at t=30 under join
 
 // join_any — parent resumes at FIRST finish (min time)
 // join_none — parent resumes immediately (t=0)

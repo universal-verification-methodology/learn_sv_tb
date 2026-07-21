@@ -1,53 +1,53 @@
 {
-  "module": "module00-intro",
-  "title": "Welcome to SV testbench check",
-  "passing_score": 0.67,
-  "items": [
-    {
-      "id": "q1",
-      "type": "multiple_choice",
-      "prompt": "learn_sv_tb primarily prepares you for…",
-      "choices": [
-        "Directed SV testbench literacy before UVM and formal",
-        "Place-and-route floorplanning only",
-        "Git remote configuration only",
-        "Writing a commercial Ethernet VIP from scratch"
-      ],
-      "answer": 0,
-      "explain": "The course covers self-check, classes, CRV, cover, and SVA as pre-UVM literacy."
-    },
-    {
-      "id": "q2",
-      "type": "multiple_choice",
-      "prompt": "Track A in this course means…",
-      "choices": [
-        "Local SV testbench sketches with a real toolchain",
-        "Only Vivado GUI tutorials",
-        "Skipping all checklists",
-        "Uploading RTL to a grading server"
-      ],
-      "answer": 0,
-      "explain": "Track A is offline compile-and-run fidelity."
-    },
-    {
-      "id": "q3",
-      "type": "multiple_choice",
-      "prompt": "Track B practice for shipped lab modules is…",
-      "choices": [
-        "Browser SV TB concept labs on the learning platform",
-        "Only PowerPoint slides",
-        "Only synthesis P&R reports",
-        "Only GitHub Issues"
-      ],
-      "answer": 0,
-      "explain": "Track B builds intuition in-browser before or alongside Track A."
-    },
-    {
-      "id": "q4",
-      "type": "true_false",
-      "prompt": "Browser concept labs replace a full offline toolchain for this course.",
-      "answer": false,
-      "explain": "Labs are literacy tools; Track A keeps real compile-and-run fidelity."
-    }
-  ]
+ "module": "module00-intro",
+ "title": "Welcome to SV testbench check",
+ "passing_score": 0.67,
+ "items": [
+ {
+ "id": "q1",
+ "type": "multiple_choice",
+ "prompt": "learn_sv_tb primarily prepares you for…",
+ "choices": [
+ "Directed SV testbench literacy before UVM and formal",
+ "Place-and-route floorplanning only",
+ "Git remote configuration only",
+ "Writing a commercial Ethernet VIP from scratch"
+ ],
+ "answer": 0,
+ "explain": "The course covers self-check, classes, CRV, cover, and SVA as pre-UVM literacy."
+ },
+ {
+ "id": "q2",
+ "type": "multiple_choice",
+ "prompt": "Track A in this course means…",
+ "choices": [
+ "Local SV testbench sketches with a real toolchain",
+ "Only Vivado GUI tutorials",
+ "Skipping all checklists",
+ "Uploading RTL to a grading server"
+ ],
+ "answer": 0,
+ "explain": "Track A is offline compile-and-run fidelity."
+ },
+ {
+ "id": "q3",
+ "type": "multiple_choice",
+ "prompt": "Track B practice for shipped lab modules is…",
+ "choices": [
+ "Browser SV TB concept labs on the learning platform",
+ "Only PowerPoint slides",
+ "Only synthesis P&R reports",
+ "Only GitHub Issues"
+ ],
+ "answer": 0,
+ "explain": "Track B builds intuition in-browser before or alongside Track A."
+ },
+ {
+ "id": "q4",
+ "type": "true_false",
+ "prompt": "Browser concept labs replace a full offline toolchain for this course.",
+ "answer": false,
+ "explain": "Labs are literacy tools; Track A keeps real compile-and-run fidelity."
+ }
+ ]
 }
